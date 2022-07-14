@@ -10,7 +10,7 @@ class Persona(object):
 
 def saludo(request):
 
-    p1=Persona("Angel", "Barrera")
+    p1 = Persona("Angel", "Barrera") # variable asignada a el constructor
 
     nombre = "Miguel" 
     apellido = "Lopez"
@@ -21,7 +21,7 @@ def saludo(request):
     plt=Template(doc_externo.read())
     doc_externo.close()
     ctx=Context({"val_nombre": p1.nombre,"val_apellido":p1.apellido , "val_edad": edad, "val_fecha" :val_fun_fecha })
-    documento = plt.render( ctx)
+    documento = plt.render(ctx)
     return HttpResponse(documento)
 
 def Despedida(request):
