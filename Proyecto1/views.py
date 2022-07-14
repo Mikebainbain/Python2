@@ -16,11 +16,12 @@ def saludo(request):
     apellido = "Lopez"
     edad = 25
     val_fun_fecha = datetime.now()  #se puede colocar el valor que le queremos asignar directamente  osea a lado de el valor clave
+    tema = ["Cocina","Tecnologia","Noticias","Cultura"]
     
     doc_externo=open("C:/Users/ur513.dsi/Desktop/Proyectos_django/Proyecto1/Proyecto1/Plantillas/index.html") 
     plt=Template(doc_externo.read())
     doc_externo.close()
-    ctx=Context({"val_nombre": p1.nombre,"val_apellido":p1.apellido , "val_edad": edad, "val_fecha" :val_fun_fecha })
+    ctx=Context({"val_nombre": p1.nombre,"val_apellido":p1.apellido , "val_edad": edad, "val_fecha" :val_fun_fecha , "temas":tema})
     documento = plt.render(ctx)
     return HttpResponse(documento)
 

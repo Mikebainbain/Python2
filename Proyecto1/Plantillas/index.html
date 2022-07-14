@@ -10,8 +10,27 @@
     Primera plantilla 
     </br>
     Hola mi nombre es : {{val_nombre}} {{val_apellido}} y tengo {{val_edad}} years
-
     </br>
     La fecha es : {{val_fecha}}
+    </br>
+    <!-- Impresion de listas  -->
+    Lista : {{temas}} 
+    </br>
+    <!-- Impresion de un elemento de la lista  -->
+    elemento 1 de lista:  {{temas.1}}
+    </br>
+
+    <!-- bucle for que recorre toda la lista e imprime ese valor -->
+    <p>
+    {% for x in temas %}
+       
+    <li>{{x}}</li>
+        
+
+    {% endfor %}
+    </p>
+
+
+
 </body>
 </html>
