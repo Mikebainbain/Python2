@@ -32,7 +32,13 @@ def saludo(request):
     return render(request,"index.html",{"val_nombre": p1.nombre,"val_apellido":p1.apellido , "val_edad": edad, "val_fecha" :val_fun_fecha , "temas":tema,"ots_temas":tema2})
 
 
+def cursoC(request):
+    val_fun_fecha = datetime.now()
+    return render(request,"cursoPython.html",{"val_fecha":val_fun_fecha})
 
+
+def cursoJ(request):
+    return render(request,"cursojava.html")
 
 def Despedida(request):
     return HttpResponse("Adios django")

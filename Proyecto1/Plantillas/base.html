@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    {% include "superior/barra.html" %}
+    
+    <h1>Pildoras informaticas</h1>
+    <h3>Esta es una plantilla base dejando la informacion de title y parte del body blockeada para que django pueda mofificar es sus archivos</h3>
+    {% block  content %}
+
+
+    {% endblock %}
+
+    <footer>
+        <p>Gracias por su tiempo</p>
+    </footer> 
+</body>
+</html>
