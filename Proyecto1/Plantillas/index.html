@@ -8,29 +8,46 @@
 </head>
 <body>
     Primera plantilla 
-    </br>
-    Hola mi nombre es : {{val_nombre}} {{val_apellido}} y tengo {{val_edad}} years
-    </br>
+    </br>             <!--Metodo que   convierte en mayusculas-->
+                                  <!-- V -->
+    Hola mi nombre es : {{val_nombre.upper}} {{val_apellido|lower}} y tengo {{val_edad}} years
+    </br>                                           <!--   /\    -->
+                                 <!--FILTRO ( | ) lower que actua de manera parecida a los metodos las hace minusculas-->
     La fecha es : {{val_fecha}}
     </br>
     <!-- Impresion de listas  -->
     Lista : {{temas}} 
     </br>
     <!-- Impresion de un elemento de la lista  -->
-    elemento 1 de lista:  {{temas.1}}
+    elemento 1 de lista:  {{temas.1}} 
     </br>
 
     <!-- bucle for que recorre toda la lista e imprime ese valor -->
     <p>
     {% for x in temas %}
        
-    <li>{{x}}</li>
-        
-
+        <li>{{x}}</li>
+      
     {% endfor %}
     </p>
+   
+    Segundo for evaluado con condicional
 
+    {% if ots_temas  %}
 
-
+    <p>
+        {% for y in ots_temas %}
+           
+            <li>{{y}}</li>
+          
+        {% endfor %}
+    </p>
+    {% else %}
+        <p>No hay elementos en la lista </p>
+    {% endif %}
+    <!-- if con condiciones  -->
+    {% if val_apellido == 'Barrera' %}
+        <h1>Bienvenido Miguel Angel</h1>
+    {% endif%}
 </body>
 </html>
